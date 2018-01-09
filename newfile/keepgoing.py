@@ -9,4 +9,4 @@ print 'test for master || 165 || 167'
 print '=====test for build environment======'
 print 'test for Delete workspace before build starts'
 
-print 'test for change workspace_reload'
+print 'test for change workspace again'
