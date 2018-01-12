@@ -9,3 +9,5 @@ print '===new dev11111==='
 print '===test for global workspace==='
 # build new project to test
 print '===test for global workspace==='
+
+# 測試 專案的workspace位置
