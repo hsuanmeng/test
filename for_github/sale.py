@@ -25,11 +25,3 @@ if __name__ == '__main__':
     sale.order_no = "#123"
     assert sale.order_no == "#123", "Order No is #123"
 
-    sale = Sale()
-    sale.name = "Melvin"
-    assert sale.name == "melvin chu", "Name is not Melvin"
-
-    assert True, "Nothing happen"
-    assert False, "Everything Wrong"
-
-    assert 2 + 2 == 5, "Houston we've got a problem"
