@@ -13,3 +13,5 @@ print '===test for global workspace==='
 # 測試 專案的workspace位置
 # 測試 email again
 print '===test for sending email==='
+
+# 測試 report
