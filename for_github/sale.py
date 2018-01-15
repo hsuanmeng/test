@@ -1,27 +1,18 @@
+# sale.py
 
-class Sale(object):
-    @property
-    def order_no(self):
-        return self._orderno
+import random
+try:
+    import unittest2 as unittest
+except ImportError:
+    import unittest
 
-    @order_no.setter
-    def order_no(self, value):
-        self._orderno = value
-        pass
-    pass
+class SimpleTest(unittest.TestCase):
+    @unittest.skip("demonstrating skipping")
+    def test_skipped(self):
+        self.fail("shouldn't happen")
 
-    @property
-    def name(self):
-        return self._name
+    def test_pass(self):
+        self.assertEqual(10, 7 + 3)
 
-    @name.setter
-    def name(self, value):
-        self._name = value
-        pass
-
-
-if __name__ == '__main__':
-    sale = Sale()
-    sale.order_no = "#123"
-    assert sale.order_no == "#123", "Order No is #123"
-
+    def test_fail(self):
+        self.assertEqual(11, 7 + 3)
