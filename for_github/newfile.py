@@ -15,3 +15,4 @@ print '===test for global workspace==='
 print '===test for sending email==='
 
 # 測試 report
+# 測試 both node where to run
