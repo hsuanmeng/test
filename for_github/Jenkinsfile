@@ -1,4 +1,5 @@
 pipeline{
+    agent any
     node {
    git url: 'https://github.com/hsuanmeng/test.git'
     stage('First'){ echo 'steps here' }
