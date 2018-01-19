@@ -1,5 +1,7 @@
 pipeline{
-    agent any
-
-        stage('name'){ echo 'steps here' }
+    node{
+    stage('First'){ echo 'steps here' }
+    stage('Second'){echo 'Step 2'}
+    stage('Third'){echo 'Step 3'}
+    }
 }
