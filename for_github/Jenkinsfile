@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+    stages {
+        stage('Compile Stage'){
+           steps{
+            sh 'test'
+           }
+        }
+
+        stage('Testing Stage'){
+           steps{
+            sh 'Stage test'
+           }
+        }
+    }
+}
