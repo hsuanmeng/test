@@ -1,7 +1,8 @@
 pipeline{
-    node{
+    node {
+   git url: 'https://github.com/hsuanmeng/test.git'
     stage('First'){ echo 'steps here' }
     stage('Second'){echo 'Step 2'}
     stage('Third'){echo 'Step 3'}
-    }
+}
 }
