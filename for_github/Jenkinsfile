@@ -8,11 +8,11 @@ pipeline{
         label 'testingEnv'
         customWorkspace '/data/workspace/testing1'
     }
+    }
 
     stage('check out'){
      ehco 'check from git'
     git url: 'https://github.com/hsuanmeng/test.git'
-    }
     }
 
     stage('First'){ echo 'steps here' }
