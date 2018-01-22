@@ -28,8 +28,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            <state relative-caret-position="19">
+              <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -541,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516592744274</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="test for parallel(modify4) have't change workspace">
+      <created>1516593007358</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1516593007358</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView">
@@ -607,7 +614,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="workspace" />
     <MESSAGE value="workspace_project" />
     <MESSAGE value="report" />
     <MESSAGE value="測試node" />
@@ -632,7 +638,8 @@
     <MESSAGE value="test for parallel(modify1)" />
     <MESSAGE value="test for parallel(modify2)" />
     <MESSAGE value="test for parallel(modify3)" />
-    <option name="LAST_COMMIT_MESSAGE" value="test for parallel(modify3)" />
+    <MESSAGE value="test for parallel(modify4) have't change workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="test for parallel(modify4) have't change workspace" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -818,8 +825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        <state relative-caret-position="19">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
           <folding />
         </state>
       </provider>
