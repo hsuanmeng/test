@@ -28,8 +28,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="94" lean-forward="true" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="94" />
+            <state relative-caret-position="325">
+              <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -506,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516591904645</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="test for parallel(modify)">
+      <created>1516592001529</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1516592001529</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView">
@@ -596,7 +603,8 @@
     <MESSAGE value="test parallel" />
     <MESSAGE value="test parallel(modify node)" />
     <MESSAGE value="test for parallel" />
-    <option name="LAST_COMMIT_MESSAGE" value="test for parallel" />
+    <MESSAGE value="test for parallel(modify)" />
+    <option name="LAST_COMMIT_MESSAGE" value="test for parallel(modify)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -782,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="94" lean-forward="true" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="94" />
+        <state relative-caret-position="325">
+          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
           <folding />
         </state>
       </provider>
