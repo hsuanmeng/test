@@ -1,5 +1,5 @@
 pipeline{
-    agent {node{customWorkspace '/data/workspace'}}
+    agent anyx
     stages {
         stage('Non-Parallel Stage'){
             steps{
