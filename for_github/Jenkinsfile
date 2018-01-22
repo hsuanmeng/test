@@ -9,13 +9,13 @@ pipeline{
         stage('distribute'){
               parallel{
                     stage('166'){
-                        agent{label 'testingEnv' customWorkspace '/data/workspace'}
+                        agent{node{label 'testingEnv' customWorkspace '/data/workspace'}}
                         steps {
                             echo "Test On 166"
                         }
                     }
                     stage('165'){
-                        agent{label 'testingEnv1' customWorkspace '/data/workspace'}
+                        agent{node{label 'testingEnv1' customWorkspace '/data/workspace'}}
                     steps {
                         echo "Test On 165"
                         }
