@@ -1,6 +1,6 @@
 pipeline{
     agent {
-    node {label 'testingEnv||testingEnv1'
+    node {label 'testingEnv&&testingEnv1'
         customWorkspace '/data/workspace/test_pipeline'}
         }
 

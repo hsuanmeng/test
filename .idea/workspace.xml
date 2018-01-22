@@ -38,8 +38,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+            <state relative-caret-position="57">
+              <caret line="3" column="51" lean-forward="true" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -453,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516587453386</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="test 2 labels(change label)">
+      <created>1516587532830</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1516587532830</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -536,7 +543,8 @@
     <MESSAGE value="test two labels(add 2 agent)" />
     <MESSAGE value="test two labels(node)" />
     <MESSAGE value="test label(node)" />
-    <option name="LAST_COMMIT_MESSAGE" value="test label(node)" />
+    <MESSAGE value="test 2 labels(change label)" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 2 labels(change label)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -722,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        <state relative-caret-position="57">
+          <caret line="3" column="51" lean-forward="true" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
           <folding />
         </state>
       </provider>
