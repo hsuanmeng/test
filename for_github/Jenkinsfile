@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent none
     stages {
         stage('Non-Parallel Stage'){
             steps{
@@ -9,7 +9,7 @@ pipeline{
         stage('distribute'){
               parallel{
                     stage('166'){
-                        agent{label 'testingEnv'}
+                        agent{node{label 'testingEnv',ws '/data/workspace'}}
                         steps {
                             echo "Test On 166"
                         }
