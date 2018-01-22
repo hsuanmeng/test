@@ -9,7 +9,8 @@ pipeline{
         stage('distribute'){
               parallel{
                     stage('166'){
-                        agent{node('testingEnv'){ws('/data/workspace/${ITEM_FULLNAME}')}}
+                        agent{label 'testingEnv'}
+                        ws('/data/workspace/${ITEM_FULLNAME}')
                         steps {
                             echo "Test On 166"
                         }
