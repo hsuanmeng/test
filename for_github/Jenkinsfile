@@ -1,10 +1,11 @@
 pipeline{
     agent {
-    node {label 'testingEnv'
-        customWorkspace '/data/workspace/testing1'}
+    node {label 'testingEnv','testingEnv1'
+        customWorkspace '/data/workspace/test_pipeline'}
     }
 
     stages {
-        stage('First'){ steps{ echo 'steps here' }}
+        stage('First'){ steps{ echo 'step start' }}
+        stage('Second'){steps{ echo 'step 2'}}
     }
 }
