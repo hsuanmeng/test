@@ -1,17 +1,19 @@
 pipeline{
-    agent {
-    parallel(
-    "166": {
-    node {label 'testingEnv'
-        customWorkspace '/data/workspace/test_pipeline'}
-        },
-    "165":{label 'testingEnv1'
-        customWorkspace '/data/workspace/test_pipeline'}
-        )
-        }
-
+    agent none
     stages {
-        stage('First'){ steps{ sh "echo step start" }}
-        stage('Second'){steps{ echo 'Step2'}}
+        stage('distribute'){
+            steps{
+                parallel(
+                    "166": {
+                        node {label 'testingEnv'
+                        customWorkspace '/data/workspace/test_pipeline'}
+                        },
+                    "165":{
+                        node{label 'testingEnv1'
+                        customWorkspace '/data/workspace/test_pipeline'}
+                        }
+                    )
+                }
+            }
+        }
     }
-}
