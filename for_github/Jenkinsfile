@@ -5,11 +5,11 @@ pipeline{
             steps{
                 parallel(
                     "166": {
-                        node {label 'testingEnv'
+                        node('testingEnv') {
                         customWorkspace '/data/workspace/test_pipeline'}
                         },
                     "165":{
-                        node{label 'testingEnv1'
+                        node('testingEnv1'){
                         customWorkspace '/data/workspace/test_pipeline'}
                         }
                     )
