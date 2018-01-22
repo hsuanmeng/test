@@ -12,7 +12,7 @@ pipeline{
                     steps {
                         echo "Test On 166"
                     }
-                    stage('165'){{agent{label 'testingEnv1' customWorkspace '/data/workspace}}}
+                    stage('165'){agent{label 'testingEnv1' customWorkspace '/data/workspace'}}
                     steps {
                         echo "Test On 165"
                     }
