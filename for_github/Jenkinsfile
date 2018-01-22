@@ -1,16 +1,16 @@
 pipeline{
-    agent none
+    agent {node{customWorkspace '/data/workspace/test_pipeline'}}
     stages {
         stage('distribute'){
             steps{
                 parallel(
                     "166": {
                         node('testingEnv') {
-                        customWorkspace '/data/workspace/test_pipeline'}
+                        echo'hello 166'}
                         },
                     "165":{
                         node('testingEnv1'){
-                        customWorkspace '/data/workspace/test_pipeline'}
+                        echo 'hello 165'}
                         }
                     )
                 }
