@@ -1,11 +1,19 @@
 pipeline{
-    agent {
-    node {label 'testingEnv&&testingEnv1'
-        customWorkspace '/data/workspace/test_pipeline'}
-        }
+    def labels = ['testingEnv', 'testingEnv1']
+    def builders = [:]
+for (x in labels) {
+    def label = x // Need to bind the label variable before the closure - can't do 'for (label in labels)'
+
+    // Create a map to pass in to the 'parallel' step so we can fire all the builds at once
+    builders[label] = {
+      node(label) {
+        customWorkspace '/data/workspace/test_pipeline'
+      }
+    }
+}
 
     stages {
-        stage('First'){ steps{ echo 'step start' }}
-        stage('Second'){steps{ sh 'make'}}
+        stage('First'){ steps{ sh "echo step start" }}
+        stage('Second'){steps{ echo 'make'}}
     }
 }
