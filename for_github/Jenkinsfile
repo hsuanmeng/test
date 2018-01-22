@@ -4,8 +4,7 @@ pipeline{
         customWorkspace '/data/workspace/testing1'}
     }
 
-
-    stage('First'){ echo 'steps here' }
-    stage('Second'){echo 'Step 2'}
-    stage('Third'){echo 'Step 3'}
+    stages {
+        stage('First'){ steps{ echo 'steps here' }}
+    }
 }
