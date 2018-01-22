@@ -1,7 +1,13 @@
 pipeline{
     agent {
-    node {label 'testingEnv-and-testingEnv1'
+    parallel(
+    "166": {
+    node {label 'testingEnv'
         customWorkspace '/data/workspace/test_pipeline'}
+        },
+    "165":{label 'testingEnv1'
+        customWorkspace '/data/workspace/test_pipeline'}
+        )
         }
 
     stages {
