@@ -28,8 +28,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+            <state relative-caret-position="627">
+              <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -246,13 +246,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515574320865</updated>
-    </task>
-    <task id="LOCAL-00002" summary="test dev1">
-      <created>1515577073229</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1515577073229</updated>
     </task>
     <task id="LOCAL-00003" summary="new dev1">
       <created>1515577791188</created>
@@ -590,7 +583,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516616170634</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="worksapce add ${ITEM_FULLNAME}">
+      <created>1516671053408</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1516671053408</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView">
@@ -656,7 +656,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="stable" />
     <MESSAGE value="add Jekinsfile" />
     <MESSAGE value="Jekinsfile" />
     <MESSAGE value="test two label" />
@@ -681,7 +680,8 @@
     <MESSAGE value="Parallel test(node) workspace" />
     <MESSAGE value="Parallel test, try workspace(ws)" />
     <MESSAGE value="Parallel test, try workspace(node)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parallel test, try workspace(node)" />
+    <MESSAGE value="worksapce add ${ITEM_FULLNAME}" />
+    <option name="LAST_COMMIT_MESSAGE" value="worksapce add ${ITEM_FULLNAME}" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -885,8 +885,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        <state relative-caret-position="627">
+          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
           <folding />
         </state>
       </provider>
