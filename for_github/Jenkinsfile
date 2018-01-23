@@ -16,6 +16,9 @@ pipeline{
                              }
                         steps {
                             echo "Test On 166"
+                            echo "install package"
+                            cd /data/package/
+                            sh pip install -r requirements.txt
                         }
                     }
                     stage('165'){
@@ -30,22 +33,5 @@ pipeline{
                }
         }
     }
-    node{notifyStared()
-        def notifyStared(){
-            //send to Slack
-            slackSend(color:'#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
 
-            // send to HipChat
-            hipchatSend (color: 'YELLOW', notify: true,
-                message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-
-            // send to email
-            emailext (
-                to: "hsuanmeng@pershing.com.tw",
-                subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
-                <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>""",
-                recipientProviders: [[$class: 'DevelopersRecipientProvider']]
-                    )
-        }}
 }
