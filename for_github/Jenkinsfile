@@ -19,7 +19,10 @@ pipeline{
                         }
                     }
                     stage('165'){
-                        agent{label 'testingEnv1'}
+                        agent{node {
+                                label 'testingEnv1'
+                                customWorkspace '/data/workspace/'
+                                }}
                     steps {
                         echo "Test On 165"
                         }
