@@ -11,7 +11,7 @@ pipeline{
                     stage('166'){
                         agent{ node {
                                 label 'testingEnv'
-                                customWorkspace '/data/workspace/${ITEM_FULLNAME}'
+                                customWorkspace '/data/workspace/'
                                 }
                              }
                         steps {
@@ -30,5 +30,23 @@ pipeline{
                }
         }
 
+        node{notifyStared()}
+        def notifyStared(){
+            //send to Slack
+            slackSend(color:'#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+
+            // send to HipChat
+            hipchatSend (color: 'YELLOW', notify: true,
+                message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+
+            // send to email
+            emailext (
+                to: "hsuanmeng@pershing.com.tw"
+                subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>""",
+                recipientProviders: [[$class: 'DevelopersRecipientProvider']]
+                    )
+        }
     }
 }
