@@ -30,6 +30,7 @@ pipeline{
                }
         }
 
+        stage('email'){
         node{notifyStared()}
         def notifyStared(){
             //send to Slack
@@ -48,5 +49,6 @@ pipeline{
                 recipientProviders: [[$class: 'DevelopersRecipientProvider']]
                     )
         }
+    }
     }
 }
