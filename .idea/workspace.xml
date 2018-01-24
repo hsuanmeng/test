@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="faea011e-e549-4ba6-884a-e940f7218530" name="new dev1" comment="new dev1" />
-    <list default="true" id="d8842d5a-b278-445b-b581-0dd31b0b64fd" name="Default" comment="">
+    <list default="true" id="d8842d5a-b278-445b-b581-0dd31b0b64fd" name="Default" comment="test email">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_github/Jenkinsfile" afterPath="$PROJECT_DIR$/for_github/Jenkinsfile" />
     </list>
@@ -28,8 +28,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+            <state relative-caret-position="342">
+              <caret line="36" column="48" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -252,20 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515574320865</updated>
-    </task>
-    <task id="LOCAL-00036" summary="test parallel(modify node)">
-      <created>1516590541153</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1516590541153</updated>
-    </task>
-    <task id="LOCAL-00037" summary="test for parallel">
-      <created>1516591904645</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1516591904645</updated>
     </task>
     <task id="LOCAL-00038" summary="test for parallel(modify)">
       <created>1516592001529</created>
@@ -596,7 +582,21 @@
       <option name="project" value="LOCAL" />
       <updated>1516772338551</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="test email">
+      <created>1516772443942</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1516772443942</updated>
+    </task>
+    <task id="LOCAL-00086" summary="test email">
+      <created>1516772755436</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1516772755436</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView">
@@ -947,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="342">
+          <caret line="36" column="48" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
           <folding />
         </state>
       </provider>
