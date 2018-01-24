@@ -28,8 +28,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+            <state relative-caret-position="57">
+              <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -252,13 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515574320865</updated>
-    </task>
-    <task id="LOCAL-00041" summary="test for parallel(modify3)">
-      <created>1516592702907</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1516592702907</updated>
     </task>
     <task id="LOCAL-00042" summary="test for parallel(modify3)">
       <created>1516592744274</created>
@@ -596,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516774229034</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="test option">
+      <created>1516775631463</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1516775631463</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TodoView">
@@ -662,7 +662,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test for parallel" />
     <MESSAGE value="test for parallel(modify)" />
     <MESSAGE value="test for parallel(modify1)" />
     <MESSAGE value="test for parallel(modify2)" />
@@ -687,7 +686,8 @@
     <MESSAGE value="change path(165)" />
     <MESSAGE value="test 狀態" />
     <MESSAGE value="test email" />
-    <option name="LAST_COMMIT_MESSAGE" value="test email" />
+    <MESSAGE value="test option" />
+    <option name="LAST_COMMIT_MESSAGE" value="test option" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -947,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        <state relative-caret-position="57">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           <folding />
         </state>
       </provider>

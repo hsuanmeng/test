@@ -1,8 +1,8 @@
 pipeline{
     agent none
+    options { timestamps() }
     stages {
         stage('distribute'){
-              options { timestamps() }
               parallel{
                     stage('166'){
                         when{expression{/*如果测试失败，状态为UNSTABLE*/
