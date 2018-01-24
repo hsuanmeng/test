@@ -1,11 +1,10 @@
 pipeline{
     agent none
-    options { timestamps() }
     stages {
         stage('distribute'){
               parallel{
                     stage('166'){
-                        when{expression{/*如果测试失败，状态为UNSTABLE*/
+                        when{expression{/*如果測試失敗，狀態為UNSTABLE*/
                             currentBuild.result == null || currentBuild.result == 'SUCCESS'}}
                         agent{ node {
                                 label 'testingEnv'
@@ -35,10 +34,15 @@ pipeline{
         }
 
         stage('Test'){
-            steps{mail(to:'hsuanmeng@pershing.com.tw',
-                subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) is waiting for input",
-                body: "Please go to ${env.BUILD_URL}."
+            steps{
+                script{
+                mail(
+                    to:'hsuanmeng@pershing.com.tw',
+                    subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                    body: """<p>SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                    <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>"""
                 )}
+            }
         }
     }
 
