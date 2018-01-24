@@ -18,6 +18,7 @@ pipeline{
                             echo "Test On 166"
                             echo "install package"
                             sh 'cd /data/package/'
+                            sh 'sudo apt install python-pip'
                             sh 'pip install -r requirements.txt'
                         }
                     }
