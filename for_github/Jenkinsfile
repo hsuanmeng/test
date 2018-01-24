@@ -33,10 +33,10 @@ pipeline{
         }
 
         stage('Test'){
-            mail(to:'hsuanmeng@pershing.com.tw',
+            steps{mail(to:'hsuanmeng@pershing.com.tw',
                 subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) is waiting for input",
                 body: "Please go to ${env.BUILD_URL}."
-                )
+                )}
         }
     }
 
