@@ -16,8 +16,7 @@ pipeline{
                              }
                         steps {
                             echo "Test On 166"
-                            echo "install package"
-                            sh 'whoami'
+                            //sh 'whoami'
                             sh 'pip install -r /data/workspace/requirements.txt'
                         }
                     }
@@ -28,6 +27,8 @@ pipeline{
                                 }}
                     steps {
                         echo "Test On 165"
+                        echo "install package"
+                        sh 'whoami'
                         sh 'pip install -r /data/workspace/requirements.txt'
                         }
                     }
