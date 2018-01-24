@@ -85,8 +85,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="490" />
-    <option name="y" value="28" />
+    <option name="x" value="507" />
+    <option name="y" value="-15" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -247,13 +247,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515574320865</updated>
-    </task>
-    <task id="LOCAL-00030" summary="test 2 labels(change label &amp;&amp;)">
-      <created>1516587730692</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1516587730692</updated>
     </task>
     <task id="LOCAL-00031" summary="function node">
       <created>1516588738882</created>
@@ -591,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516763629466</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="package (165)">
+      <created>1516764244072</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1516764244072</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TodoView">
