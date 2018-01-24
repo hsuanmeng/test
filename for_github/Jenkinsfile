@@ -28,8 +28,8 @@ pipeline{
                     steps {
                         echo "Test On 165"
                         echo "install package"
-                        sh 'sudo whoami'
-                        sh 'sudo pip install -r /data/workspace/requirements.txt'
+                        sh 'whoami'
+                        sh 'pip install -r /data/workspace/requirements.txt'
                         }
                     }
                }
