@@ -39,9 +39,9 @@ pipeline{
                         mail(
                         to:'hsuanmeng@pershing.com.tw',
                         subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                        body: ""Build failed: ${env.BUILD_URL}
-                               Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':
-                               Check console output at "${env.BUILD_URL}"${env.JOB_NAME} [${env.BUILD_NUMBER}]""
+                        body: """Build failed: ${env.BUILD_URL}
+                        Fail: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':
+                        Check console output at "${env.BUILD_URL}"${env.JOB_NAME} [${env.BUILD_NUMBER}]"""
                         )
                         }
                     }
