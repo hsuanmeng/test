@@ -2,6 +2,7 @@ pipeline{
     agent none
     stages {
         stage('distribute'){
+              options { timestamps() }
               parallel{
                     stage('166'){
                         when{expression{/*如果测试失败，状态为UNSTABLE*/
@@ -27,7 +28,7 @@ pipeline{
                         echo "install package"
                         sh 'whoami'
                         //sh 'pip install -r /data/workspace/requirements.txt'
-                        post{always{ echo 'testing for post.'}}
+                        }
                         }
                     }
                }
