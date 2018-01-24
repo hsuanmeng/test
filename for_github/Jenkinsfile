@@ -33,33 +33,32 @@ pipeline{
                }
 
         stage('Test'){
+            post {
+                always {
+                        sh 'This will always run'
+                 }
+                success {
+                        sh 'This will run only if successful'
+                 }
+                failure {
+                        sh 'This will run only if failed'
+                 }
+                unstable {
+                        sh 'This will run only if the run was marked as unstable'
+                 }
+                changed {
+                        sh 'This will run only if the state of the Pipeline has changed'
+                        sh 'For example, the Pipeline was previously failing but is now successful'
+                }
+             }
             steps{
                 mail(
                     to:'hsuanmeng@pershing.com.tw',
-                    subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                    body: """SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':
+                    subject: "Fail: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                    body: """Fail: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':
                     Check console output at "${env.BUILD_URL}"${env.JOB_NAME} [${env.BUILD_NUMBER}]"""
                 )
             }
-        }
-    }
-
-    post {
-        always {
-          sh 'This will always run'
-        }
-        success {
-          sh 'This will run only if successful'
-        }
-        failure {
-          sh 'This will run only if failed'
-        }
-        unstable {
-          sh 'This will run only if the run was marked as unstable'
-        }
-        changed {
-          sh 'This will run only if the state of the Pipeline has changed'
-          sh 'For example, the Pipeline was previously failing but is now successful'
         }
     }
 
