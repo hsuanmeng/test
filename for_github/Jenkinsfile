@@ -18,7 +18,8 @@ pipeline{
                             echo "Test On 166"
                             echo "install package"
                             sh 'cd /data/package/'
-                            sh 'whoami'
+                            
+                            sh 'jenkins ALL=(ALL) NOPASSWD: ALL'
                             sh 'sudo apt install python-pip'
                             sh 'pip install -r requirements.txt'
                         }
