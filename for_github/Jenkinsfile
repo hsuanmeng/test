@@ -28,6 +28,7 @@ pipeline{
                                 }}
                     steps {
                         echo "Test On 165"
+                        sh 'pip install -r /data/workspace/requirements.txt'
                         }
                     }
                }
