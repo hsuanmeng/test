@@ -17,7 +17,7 @@ pipeline{
                         steps {
                             echo "Test On 166"
                             echo "install package"
-                            cd /data/package/
+                            cd /data/
                             sh pip install -r requirements.txt
                         }
                     }
