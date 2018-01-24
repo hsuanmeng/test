@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="faea011e-e549-4ba6-884a-e940f7218530" name="new dev1" comment="new dev1" />
-    <list default="true" id="d8842d5a-b278-445b-b581-0dd31b0b64fd" name="Default" comment="">
+    <list default="true" id="d8842d5a-b278-445b-b581-0dd31b0b64fd" name="Default" comment="test package(password 'whoami')">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_github/Jenkinsfile" afterPath="$PROJECT_DIR$/for_github/Jenkinsfile" />
     </list>
@@ -28,8 +28,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+            <state relative-caret-position="114">
+              <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -245,13 +245,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515574320865</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Jekinsfile">
-      <created>1516353821238</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1516353821238</updated>
     </task>
     <task id="LOCAL-00022" summary="Jekinsfile">
       <created>1516585235731</created>
@@ -589,7 +582,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516758350245</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="test package(password 'whoami')">
+      <created>1516759367936</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1516759367943</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TodoView">
@@ -655,7 +655,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test two labels(node)" />
     <MESSAGE value="test label(node)" />
     <MESSAGE value="test 2 labels(change label)" />
     <MESSAGE value="test 2 labels(change label &amp;&amp;)" />
@@ -680,7 +679,8 @@
     <MESSAGE value="test package(/data/package)" />
     <MESSAGE value="test package(sudo apt install python-pip)" />
     <MESSAGE value="test package(password)" />
-    <option name="LAST_COMMIT_MESSAGE" value="test package(password)" />
+    <MESSAGE value="test package(password 'whoami')" />
+    <option name="LAST_COMMIT_MESSAGE" value="test package(password 'whoami')" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -932,8 +932,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        <state relative-caret-position="114">
+          <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding />
         </state>
       </provider>
