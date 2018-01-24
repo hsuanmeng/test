@@ -27,14 +27,14 @@ pipeline{
                         echo "install package"
                         sh 'whoami'
                         //sh 'pip install -r /data/workspace/requirements.txt'
+                        post{unstable{ echo 'I am unstable.'}}
                         }
                     }
                }
         }
 
         stage('Test'){
-            steps{mail(to:'metaliu@pershing.com.tw',
-                cc: 'hsuanmeng@pershing.com.tw',
+            steps{mail(to:'hsuanmeng@pershing.com.tw',
                 subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) is waiting for input",
                 body: "Please go to ${env.BUILD_URL}."
                 )}
