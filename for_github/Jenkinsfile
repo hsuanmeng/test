@@ -9,6 +9,8 @@ pipeline{
         stage('distribute'){
               parallel{
                     stage('166'){
+                        when{expression{/*如果测试失败，状态为UNSTABLE*/
+                            currentBuild.result == null || currentBuild.result == 'SUCCESS'}}
                         agent{ node {
                                 label 'testingEnv'
                                 customWorkspace '/data/workspace/'
@@ -16,7 +18,7 @@ pipeline{
                              }
                         steps {
                             echo "Test On 166"
-                            //sh 'whoami'
+                            sh 'whoami'
                             sh 'pip install -r /data/workspace/requirements.txt'
                         }
                     }
