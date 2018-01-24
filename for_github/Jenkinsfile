@@ -34,18 +34,28 @@ pipeline{
 
         stage('Test'){
             steps{
-                post{
-                    failure{
-                        mail(
-                        to:'hsuanmeng@pershing.com.tw',
-                        subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                        body: """Build failed: ${env.BUILD_URL}
-                        Fail: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':
-                        Check console output at "${env.BUILD_URL}"${env.JOB_NAME} [${env.BUILD_NUMBER}]"""
-                        )
-                        }
-                    }
+                mail(
+                    to:'hsuanmeng@pershing.com.tw',
+                    subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                    body: """SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':
+                    Check console output at "${env.BUILD_URL}"${env.JOB_NAME} [${env.BUILD_NUMBER}]"""
+                )
             }
+        }
+    }
+
+    post {
+        always {
+          echo 'This will always run'
+        }
+        success {
+          hipchatSend(color: 'GREEN', message: 'OK')
+        }
+        failure {
+          hipchatSend(color: 'RED', message: 'FAIL')
+        }
+        unstable {
+         hipchatSend(color: 'YELLOW', message: 'UNSTABLE')
         }
     }
 
