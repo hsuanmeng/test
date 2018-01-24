@@ -1,4 +1,4 @@
-emailNotifications = 'hsuanmeng@pershing.com.tw'
+emailNotifications = 'metaliu@pershing.com.tw hsuanmeng@pershing.com.tw'
 notificationSent    = false
 
 def sendNotification(buildChanged)
@@ -64,22 +64,13 @@ pipeline{
                         echo "Test On 165"
                         echo "install package"
                         sh 'whoami'
-                        //sh 'pip install -r /data/workspace/requirements.txt'
+                        sh 'pip install -r /data/workspace/requirements.txt'
                         }
                         }
                     }
                }
 
-        stage('Test'){
-            steps{
-                mail(
-                    to:'hsuanmeng@pershing.com.tw',
-                    subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                    body: """SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':
-                    Check console output at "${env.BUILD_URL}"${env.JOB_NAME} [${env.BUILD_NUMBER}]"""
-                )
-            }
-        }
+        
     }
 
     post {
