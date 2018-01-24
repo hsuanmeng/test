@@ -49,13 +49,13 @@ pipeline{
           echo 'This will always run'
         }
         success {
-          hipchatSend(color: 'GREEN', message: 'OK')
+          hipchatSend color: 'GREEN', message: 'OK'
         }
         failure {
-          hipchatSend(color: 'RED', message: 'FAIL')
+          hipchatSend color: 'RED', message: 'FAIL'
         }
         unstable {
-         hipchatSend(color: 'YELLOW', message: 'UNSTABLE')
+         hipchatSend color: 'YELLOW', message: 'UNSTABLE'
         }
     }
 
