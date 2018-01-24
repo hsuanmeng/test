@@ -1,16 +1,54 @@
+emailNotifications = 'hsuanmeng@pershing.com.tw'
+notificationSent    = false
+
+def sendNotification(buildChanged)
+{
+    if (notificationSent)
+    {
+        return
+    }
+    notificationSent = true
+
+    if (currentBuild.currentResult == 'SUCCESS')
+    {
+        // notify users when the build is back to normal
+        mail to: emailNotifications,
+            subject: "Build fixed: ${currentBuild.fullDisplayName}",
+            body: "The build is back to normal ${env.BUILD_URL}"
+    }
+    else if ((currentBuild.currentResult == 'FAILURE') && buildChanged)
+    {
+        // notify users when the Pipeline first fails
+        mail to: emailNotifications,
+            subject: "Build failed: ${currentBuild.fullDisplayName}",
+            body: "Something went wrong with ${env.BUILD_URL}"
+    }
+    else if ((currentBuild.currentResult == 'FAILURE'))
+    {
+        // notify users when they check into a broken build
+        mail to: emailNotifications,
+            subject: "Build failed (again): ${currentBuild.fullDisplayName}",
+            body: "Something is still wrong with ${env.BUILD_URL}"
+    }
+}
+
+
 pipeline{
     agent none
     stages {
         stage('distribute'){
               parallel{
                     stage('166'){
-                        when{expression{/*如果測試失敗，狀態為UNSTABLE*/
-                            currentBuild.result == null || currentBuild.result == 'SUCCESS'}}
+                        options {
+                                timeout(time: 1, unit: 'HOURS')
+                                }
                         agent{ node {
                                 label 'testingEnv'
                                 customWorkspace '/data/workspace/'
                                 }
                              }
+                        when{expression{/*如果測試失敗，狀態為UNSTABLE*/
+                            currentBuild.result == null || currentBuild.result == 'SUCCESS'}}
                         steps {
                             echo "Test On 166"
                             sh 'whoami'
@@ -45,17 +83,11 @@ pipeline{
     }
 
     post {
-        always {
-          echo 'This will always run'
-        }
-        success {
-          hipchatSend color: 'GREEN', message: 'OK'
+       changed {
+            sendNotification buildChanged:true
         }
         failure {
-          hipchatSend color: 'RED', message: 'FAIL'
-        }
-        unstable {
-         hipchatSend color: 'YELLOW', message: 'UNSTABLE'
+            sendNotification buildChanged:false
         }
     }
 
