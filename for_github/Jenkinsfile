@@ -27,7 +27,7 @@ pipeline{
                         echo "install package"
                         sh 'whoami'
                         //sh 'pip install -r /data/workspace/requirements.txt'
-                        post{unstable{ echo 'I am unstable.'}}
+                        post{always{ echo 'testing for post.'}}
                         }
                     }
                }
