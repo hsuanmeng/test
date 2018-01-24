@@ -23,13 +23,13 @@ pipeline{
                     stage('165'){
                         agent{node {
                                 label 'testingEnv1'
-                                customWorkspace '/datajenkins/workspace/'
+                                customWorkspace '/data/workspace/'
                                 }}
                     steps {
                         echo "Test On 165"
                         echo "install package"
                         sh 'whoami'
-                        sh 'pip install -r /datajenkins/workspace/requirements.txt'
+                        sh 'pip install -r /data/workspace/requirements.txt'
                         }
                     }
                }
