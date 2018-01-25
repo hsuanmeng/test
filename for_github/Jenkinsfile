@@ -9,7 +9,7 @@ def sendNotification(buildChanged)
     }
     notificationSent = true
 
-    if (buildChanged)
+    if (buildChanged == true)
     {
         // notify users when the build is back to normal
         mail to: emailNotifications,
@@ -88,7 +88,7 @@ pipeline{
         failure {
             sendNotification buildChanged:false
         }
-        success{ sendNotification}
+        success{sendNotification }
     }
 
 }
