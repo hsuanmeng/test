@@ -17,7 +17,7 @@ def sendNotification(buildChanged, success)
             body: "The build is back to normal ${env.BUILD_URL}"
     }
 
-    else if ((currentBuild.currentResult == 'SUCCESS') && success)
+    else if ((currentBuild.currentResult == 'SUCCESS') && success == true)
     {
         // notify user when the build is success
         mail to: emailNotifications,
@@ -83,12 +83,12 @@ pipeline{
 
     post {
        changed {
-            sendNotification buildChanged:true
+            sendNotification buildChanged:true,success: null
         }
         failure {
-            sendNotification buildChanged:false
+            sendNotification buildChanged:false,success: null
         }
-        success{ sendNotification success:true}
+        success{ sendNotification buildChanged:false, success:true}
     }
 
 }
