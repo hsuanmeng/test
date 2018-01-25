@@ -16,6 +16,14 @@ def sendNotification(buildChanged)
             subject: "Build fixed: ${currentBuild.fullDisplayName}",
             body: "The build is back to normal ${env.BUILD_URL}"
     }
+
+    else if ((currentBuild.currentResult == 'SUCCESS') && buildChanged)
+    {
+        // notify user when the build is success
+        mail to: emailNotifications,
+            subject: "Build fixed: ${currentBuild.fillDisplayName}",
+            body: "The build is success, see ${env.BUILD_URL}"
+    }
     else if ((currentBuild.currentResult == 'FAILURE') && buildChanged)
     {
         // notify users when the Pipeline first fails
