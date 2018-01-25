@@ -80,7 +80,7 @@ pipeline{
         failure {
             sendNotification buildChanged:false
         }
-        success{ endNotification buildChanges:true}
+        success{ sendNotification buildChanges:true}
     }
 
 }
