@@ -80,7 +80,7 @@ pipeline{
         failure {
             sendNotification buildChanged:false
         }
-        success{ echo '====success===='}
+        success{ endNotification(true)}
     }
 
 }
