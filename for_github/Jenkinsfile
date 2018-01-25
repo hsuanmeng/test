@@ -9,7 +9,7 @@ def sendNotification(buildChanged)
     }
     notificationSent = true
 
-    if (currentBuild.currentResult == 'SUCCESS')
+    if (currentBuild.currentResult == 'SUCCESS'  && buildChanged)
     {
         // notify users when the build is back to normal
         mail to: emailNotifications,
@@ -17,7 +17,7 @@ def sendNotification(buildChanged)
             body: "The build is back to normal ${env.BUILD_URL}"
     }
 
-    else if ((currentBuild.currentResult == 'SUCCESS') && buildChanged)
+    else if ((currentBuild.currentResult == 'SUCCESS'))
     {
         // notify user when the build is success
         mail to: emailNotifications,
