@@ -1,7 +1,7 @@
 emailNotifications = 'metaliu@pershing.com.tw hsuanmeng@pershing.com.tw'
 notificationSent    = false
 
-def sendNotification(buildChanged, success)
+def sendNotification(buildChanged)
 {
     if (notificationSent)
     {
@@ -17,13 +17,6 @@ def sendNotification(buildChanged, success)
             body: "The build is back to normal ${env.BUILD_URL}"
     }
 
-    else if ((currentBuild.currentResult == 'SUCCESS') && success == true)
-    {
-        // notify user when the build is success
-        mail to: emailNotifications,
-            subject: "Build fixed: ${currentBuild.fillDisplayName}",
-            body: "The build is success, see ${env.BUILD_URL}"
-    }
     else if ((currentBuild.currentResult == 'FAILURE') && buildChanged)
     {
         // notify users when the Pipeline first fails
@@ -72,7 +65,7 @@ pipeline{
                         echo "Test On 165"
                         echo "install package"
                         sh 'whoami'
-                        //sh 'pip install -r /data/workspace/requirements.txt'
+                        sh 'pip install -r /data/workspace/requirements.txt'
                         }
                         }
                     }
@@ -88,7 +81,6 @@ pipeline{
         failure {
             sendNotification buildChanged:false,success: null
         }
-        success{ sendNotification buildChanged:false, success:true}
     }
 
 }
