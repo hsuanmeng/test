@@ -72,8 +72,9 @@ pipeline{
                }
         stage('Cucumber'){
             steps{
-                node{ sh 'behave /data/workspace/for_github/tutorial01.feature -f json.pretty -o json_reports/Tuto01.json'
-                sh 'python /data/workspace/for_github/convert2cucumber.py json_reports/Tuto01.json'}
+                sh 'behave'
+                //sh 'behave /data/workspace/for_github/tutorial01.feature -f json.pretty -o json_reports/Tuto01.json'
+                //sh 'python /data/workspace/for_github/convert2cucumber.py json_reports/Tuto01.json'
             }
         }
 
