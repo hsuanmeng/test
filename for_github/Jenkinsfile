@@ -16,6 +16,7 @@ def sendNotification(buildChanged)
             subject: "Build fixed: ${currentBuild.fullDisplayName}",
             body: "The build is back to normal ${env.BUILD_URL}"
     }
+
     else if ((currentBuild.currentResult == 'FAILURE') && buildChanged)
     {
         // notify users when the Pipeline first fails
@@ -74,10 +75,10 @@ pipeline{
     }
 
     post {
-        changed {
+       changed {
             sendNotification buildChanged:true
         }
-        failure {
+       failure {
             sendNotification buildChanged:false
         }
     }
