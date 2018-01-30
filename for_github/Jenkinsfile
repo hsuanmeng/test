@@ -64,7 +64,7 @@ pipeline{
                         echo "Test On 165"
                         echo "install package"
                         sh 'whoami'
-                        sh 'pip install -r /data/workspace/requirements.txt --user'
+                        sh 'pip install -r /data/workspace/requirements.txt'
                         }
                         }
                     }
@@ -74,7 +74,7 @@ pipeline{
     }
 
     post {
-        changed {
+       changed {
             sendNotification buildChanged:true
         }
         failure {
