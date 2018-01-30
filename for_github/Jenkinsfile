@@ -1,4 +1,4 @@
-emailNotifications = 'hsuanmeng@pershing.com.tw metaliu@pershing.com.tw'
+emailNotifications = 'metaliu@pershing.com.tw hsuanmeng@pershing.com.tw '
 notificationSent    = false
 
 def sendNotification(buildChanged)
@@ -16,7 +16,6 @@ def sendNotification(buildChanged)
             subject: "Build fixed: ${currentBuild.fullDisplayName}",
             body: "The build is back to normal ${env.BUILD_URL}"
     }
-
     else if ((currentBuild.currentResult == 'FAILURE') && buildChanged)
     {
         // notify users when the Pipeline first fails
@@ -32,7 +31,6 @@ def sendNotification(buildChanged)
             body: "Something is still wrong with ${env.BUILD_URL}"
     }
 }
-
 
 pipeline{
     agent none
