@@ -74,6 +74,8 @@ pipeline{
     }
 
     post {
+        always{ //generate cucumber reports
+                    cucumber '**/*.json'}
        changed {
             sendNotification buildChanged:true
         }
