@@ -1,4 +1,4 @@
-emailNotifications = 'metaliu@pershing.com.tw hsuanmeng@pershing.com.tw '
+emailNotifications = 'metaliu@pershing.com.tw hsuanmeng@pershing.com.tw'
 notificationSent    = false
 
 def sendNotification(buildChanged)
@@ -32,6 +32,7 @@ def sendNotification(buildChanged)
     }
 }
 
+
 pipeline{
     agent none
     stages {
@@ -63,7 +64,7 @@ pipeline{
                         echo "Test On 165"
                         echo "install package"
                         sh 'whoami'
-                        sh 'pip install -r /data/workspace/requirements.txt --user'
+                        //sh 'pip install -r /data/workspace/requirements.txt'
                         }
                         }
                     }
@@ -73,12 +74,13 @@ pipeline{
     }
 
     post {
-        changed {
+       changed {
             sendNotification buildChanged:true
         }
         failure {
             sendNotification buildChanged:false
         }
+        success{ endNotification buildChanges:true}
     }
 
 }
