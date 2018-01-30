@@ -54,7 +54,6 @@ pipeline{
                             echo "Test On 166"
                             sh 'whoami'
                             sh 'pip install -r /data/workspace/requirements.txt'
-                            //cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'
                         }
                     }
                     stage('165'){
@@ -67,15 +66,14 @@ pipeline{
                         echo "install package"
                         sh 'whoami'
                         sh 'pip install -r /data/workspace/requirements.txt --user'
-                        cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'
                         }
                         }
                     }
                }
         stage('Cucumber'){
             steps{
-                //cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'
                 echo 'test behave'
+                cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'
                 //sh 'behave'
                 //sh 'behave /data/workspace/for_github/tutorial01.feature -f json.pretty -o json_reports/Tuto01.json'
                 //sh 'python /data/workspace/for_github/convert2cucumber.py json_reports/Tuto01.json'
