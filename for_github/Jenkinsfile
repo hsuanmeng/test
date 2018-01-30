@@ -16,11 +16,11 @@ def sendNotification(buildChanged)
             subject: "Build fixed: ${currentBuild.fullDisplayName}",
             body: "The build is back to normal ${env.BUILD_URL}"
     }
+
     else if ((currentBuild.currentResult == 'FAILURE') && buildChanged)
     {
         // notify users when the Pipeline first fails
         mail to: emailNotifications,
-             cc: 'hsuanmeng@pershing.com.tw',
             subject: "Build failed: ${currentBuild.fullDisplayName}",
             body: "Something went wrong with ${env.BUILD_URL}"
     }
@@ -65,7 +65,7 @@ pipeline{
                         echo "Test On 165"
                         echo "install package"
                         sh 'whoami'
-                        sh 'pip install -r /data/workspace/requirements.txt'
+                        sh 'pip install -r /data/workspace/requirements.txt --user'
                         }
                         }
                     }
@@ -76,10 +76,10 @@ pipeline{
 
     post {
        changed {
-            sendNotification buildChanged:true
+            sendNotification buildChanged:true,success: null
         }
-       failure {
-            sendNotification buildChanged:false
+        failure {
+            sendNotification buildChanged:false,success: null
         }
     }
 
