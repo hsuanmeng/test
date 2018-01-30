@@ -76,10 +76,10 @@ pipeline{
 
     post {
        changed {
-            sendNotification buildChanged:true,success: null
+            sendNotification buildChanged:true
         }
         failure {
-            sendNotification buildChanged:false,success: null
+            sendNotification buildChanged:false
         }
     }
 
