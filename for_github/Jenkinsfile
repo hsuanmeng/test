@@ -64,11 +64,20 @@ pipeline{
                         echo "Test On 165"
                         echo "install package"
                         sh 'whoami'
-                        sh 'pip install -r /data/workspace/requirements.txt'
+                        sh 'pip install -r /data/workspace/requirements.txt --user'
                         }
                         }
                     }
                }
+         stage('Test'){
+                steps{
+                email(
+                to: 'hsuanmeng@pershing.com.tw',
+                subject: "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: "details"
+                )
+                }
+         }
 
 
     }
