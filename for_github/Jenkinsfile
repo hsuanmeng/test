@@ -1,4 +1,4 @@
-emailNotifications = 'metaliu@pershing.com.tw hsuanmeng@pershing.com.tw'
+emailNotifications = 'hsuanmeng@pershing.com.tw metaliu@pershing.com.tw'
 notificationSent    = false
 
 def sendNotification(buildChanged)
@@ -76,10 +76,10 @@ pipeline{
 
     post {
        changed {
-            sendNotification buildChanged:true,success: null
+            sendNotification buildChanged:true
         }
         failure {
-            sendNotification buildChanged:false,success: null
+            sendNotification buildChanged:false
         }
     }
 
