@@ -69,22 +69,11 @@ pipeline{
                         }
                     }
                }
-         //stage('Test'){
-                //steps{
-                //mail(
-                    //to:'hsuanmeng@pershing.com.tw',
-                    //subject: "Fail: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                    //body: """Fail: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':
-                    //Check console output at "${env.BUILD_URL}"${env.JOB_NAME} [${env.BUILD_NUMBER}]"""
-                //)
-
-                //}
-         //}
-
 
     }
 
     post {
+       always{echo 'always be there.'}
        changed {
             sendNotification buildChanged:true
         }
