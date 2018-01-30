@@ -75,7 +75,7 @@ pipeline{
     }
 
     post {
-       changed {
+        changed {
             sendNotification buildChanged:true
         }
         failure {
