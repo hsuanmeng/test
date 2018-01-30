@@ -20,6 +20,7 @@ def sendNotification(buildChanged)
     {
         // notify users when the Pipeline first fails
         mail to: emailNotifications,
+             cc: 'hsuanmeng@pershing.com.tw',
             subject: "Build failed: ${currentBuild.fullDisplayName}",
             body: "Something went wrong with ${env.BUILD_URL}"
     }
@@ -64,7 +65,7 @@ pipeline{
                         echo "Test On 165"
                         echo "install package"
                         sh 'whoami'
-                        sh 'pip install -r /data/workspace/requirements.txt --user'
+                        sh 'pip install -r /data/workspace/requirements.txt'
                         }
                         }
                     }
