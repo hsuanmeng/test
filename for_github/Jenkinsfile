@@ -73,7 +73,7 @@ pipeline{
     }
 
     post {
-       always{echo 'always be there.'}
+       always{sendNotification buildChanged:true}
        changed {
             sendNotification buildChanged:true
         }

@@ -28,8 +28,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1209">
-              <caret line="84" column="1" lean-forward="true" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+            <state relative-caret-position="335">
+              <caret line="77" column="46" lean-forward="true" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -275,13 +275,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515574320865</updated>
-    </task>
-    <task id="LOCAL-00101" summary="test email">
-      <created>1516783348828</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1516783348828</updated>
     </task>
     <task id="LOCAL-00102" summary="test email">
       <created>1516784128419</created>
@@ -619,7 +612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517299076483</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary="test post">
+      <created>1517299165837</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1517299165837</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="TodoView">
@@ -708,9 +708,9 @@
     <MESSAGE value="test email" />
     <MESSAGE value="test post(165 error)" />
     <MESSAGE value="install package (--user)" />
-    <MESSAGE value="test post" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="test post" />
+    <option name="LAST_COMMIT_MESSAGE" value="test post" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1085,8 +1085,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1209">
-          <caret line="84" column="1" lean-forward="true" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+        <state relative-caret-position="335">
+          <caret line="77" column="46" lean-forward="true" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
           <folding />
         </state>
       </provider>
