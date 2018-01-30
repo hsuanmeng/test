@@ -28,8 +28,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+            <state relative-caret-position="373">
+              <caret line="76" column="16" lean-forward="true" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -275,13 +275,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515574320865</updated>
-    </task>
-    <task id="LOCAL-00097" summary="test post">
-      <created>1516780097969</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1516780097969</updated>
     </task>
     <task id="LOCAL-00098" summary="test email">
       <created>1516780443651</created>
@@ -619,7 +612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517298441748</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="test">
+      <created>1517298687796</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1517298687796</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1085,8 +1085,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_github/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+        <state relative-caret-position="373">
+          <caret line="76" column="16" lean-forward="true" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
           <folding />
         </state>
       </provider>
