@@ -71,7 +71,7 @@ pipeline{
                }
          stage('Test'){
                 steps{
-                email(
+                emailext(
                 to: 'hsuanmeng@pershing.com.tw',
                 subject: "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                 body: "details"
