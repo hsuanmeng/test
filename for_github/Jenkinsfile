@@ -3,6 +3,10 @@ notificationSent    = false
 
 def sendNotification(buildChanged)
 {
+    if (notificationSent)
+    {
+        return
+    }
     notificationSent = true
 
     if (currentBuild.currentResult == 'SUCCESS')
@@ -81,7 +85,8 @@ pipeline{
     }
 
     post {
-        changed {
+        always{ ehco 'test always'}
+        success {
             sendNotification buildChanged:true
         }
         failure {
