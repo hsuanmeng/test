@@ -54,8 +54,8 @@ pipeline{
                             echo "Test On 166"
                             sh 'whoami'
                             sh 'pip install -r /data/workspace/requirements.txt'
-                            cucumber fileIncludePattern: '*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
-
+                            //cucumber fileIncludePattern: '*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
+                            cucumber --format json /data/workspace/features/one_passing_one_failing.feature
                         }
                     }
                     stage('165'){
