@@ -84,12 +84,11 @@ pipeline{
 
     }
 
-    post {
-        always{ ehco 'test always'}
-        success {
+    post{
+        changed{
             sendNotification buildChanged:true
         }
-        failure {
+        failure{
             sendNotification buildChanged:false
         }
     }
