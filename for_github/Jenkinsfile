@@ -3,10 +3,6 @@ notificationSent    = false
 
 def sendNotification(buildChanged)
 {
-    if (notificationSent)
-    {
-        return
-    }
     notificationSent = true
 
     if (currentBuild.currentResult == 'SUCCESS')
