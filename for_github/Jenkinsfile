@@ -55,6 +55,7 @@ pipeline{
                             sh 'whoami'
                             sh 'pip install -r /data/workspace/requirements.txt'
                             cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
+
                         }
                     }
                     stage('165'){
