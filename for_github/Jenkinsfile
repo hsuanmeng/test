@@ -54,7 +54,7 @@ pipeline{
                             echo "Test On 166"
                             sh 'whoami'
                             sh 'pip install -r /data/workspace/requirements.txt'
-                            //cucumber fileIncludePattern: '*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
+                            cucumber fileIncludePattern: '*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
 
                         }
                     }
