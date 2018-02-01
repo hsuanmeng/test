@@ -55,7 +55,7 @@ pipeline{
                             sh 'whoami'
                             sh 'pip install -r /data/workspace/requirements.txt'
                             sh 'cucumber -f json /data/workspace/features/one_passing_one_failing.feature -o /data/workspace/report.json'
-                            //sh 'cucumber -f json /data/workspace/features/embed.feature -o /data/workspace/report.json'
+                            sh 'cucumber -f json /data/workspace/features/embed.feature -o /data/workspace/report1.json'
                             cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
                         }
                     }
@@ -69,8 +69,8 @@ pipeline{
                         echo "change 權限"
                         sh 'whoami'
                         sh 'pip install -r /data/workspace/requirements.txt'
-                        sh 'cucumber -f json /data/workspace/features/embed.feature -o /data/workspace/report.json'
-                        cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
+                        //sh 'cucumber -f json /data/workspace/features/embed.feature -o /data/workspace/report.json'
+                        //cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
 
                         }
                         }
