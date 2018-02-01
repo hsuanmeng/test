@@ -68,7 +68,7 @@ pipeline{
                         echo "Test On 167"
                         echo "change 權限"
                         sh 'whoami'
-                        //sh 'pip install -r /data/workspace/requirements.txt --user'
+                        sh 'pip install -r /data/workspace/requirements.txt'
                         //sh 'cucumber -f json /data/workspace/features/embed.feature -o /data/workspace/report.json'
 
                         }
