@@ -56,6 +56,7 @@ pipeline{
                             sh 'pip install -r /data/workspace/requirements.txt'
                             sh 'cucumber -f json /data/workspace/features/one_passing_one_failing.feature -o /data/workspace/report.json'
                             sh 'cucumber -f json /data/workspace/features/embed.feature -o /data/workspace/report1.json'
+                            sh 'cucumber -f json /data/workspace/features/outline.feature -o /data/workspace/report2.json'
                             cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
                         }
                     }
