@@ -55,20 +55,20 @@ pipeline{
                             sh 'whoami'
                             sh 'pip install -r /data/workspace/requirements.txt'
                             //sh 'cucumber -f json /data/workspace/features/one_passing_one_failing.feature -o /data/workspace/report.json'
-                            sh 'cucumber -f json /data/workspace/features/embed.feature -o /data/workspace/report.json'
-                            cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
+                            //sh 'cucumber -f json /data/workspace/features/embed.feature -o /data/workspace/report.json'
+                            //cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: '/data/workspace/', sortingMethod: 'ALPHABETICAL'
                         }
                     }
-                    stage('165'){
+                    stage('167'){
                         agent{node {
                                 label 'testingEnv1'
                                 customWorkspace '/data/workspace/'
                                 }}
                     steps {
-                        echo "Test On 165"
+                        echo "Test On 167"
                         echo "install package"
                         sh 'whoami'
-                        sh 'pip install -r /data/workspace/requirements.txt --user'
+                        //sh 'pip install -r /data/workspace/requirements.txt --user'
                         //sh 'cucumber -f json /data/workspace/features/embed.feature -o /data/workspace/report.json'
 
                         }
